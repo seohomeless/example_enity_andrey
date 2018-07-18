@@ -1,0 +1,7 @@
+example.routing:
+  path: '/my_enity'
+  defaults:
+    _title: 'Enity views'
+    _controller: '\Drupal\example\Controller\exampleController::test'
+  requirements:
+    _permission: 'access content'

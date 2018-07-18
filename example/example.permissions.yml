@@ -1,0 +1,30 @@
+add example entities:
+  title: 'Create new Example entities'
+
+administer example entities:
+  title: 'Administer Example entities'
+  description: 'Allow to access the administration form to configure Example entities.'
+  restrict access: true
+
+delete example entities:
+  title: 'Delete Example entities'
+
+edit example entities:
+  title: 'Edit Example entities'
+
+view published example entities:
+  title: 'View published Example entities'
+
+view unpublished example entities:
+  title: 'View unpublished Example entities'
+
+view all example revisions:
+  title: 'View all Example revisions'
+
+revert all example revisions:
+  title: 'Revert all Example revisions'
+  description: 'Role requires permission <em>view Example revisions</em> and <em>edit rights</em> for example entities in question or <em>administer example entities</em>.'
+
+delete all example revisions:
+  title: 'Delete all revisions'
+  description: 'Role requires permission to <em>view Example revisions</em> and <em>delete rights</em> for example entities in question or <em>administer example entities</em>.'

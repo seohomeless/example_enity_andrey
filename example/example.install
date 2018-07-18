@@ -1,0 +1,52 @@
+<?php
+
+function example_install() {
+		$quotes = array(); 
+		  $quotes[] = "Будьте внимательны к своим"; 
+		  $quotes[] = "Выживает не самый умный"; 
+		  $quotes[] = "Жизнь гора"; 
+		  $quotes[] = "Люди не хотят"; 
+
+		$descriptions = array(); 
+		  $descriptions[] = "На счету предприятия более 600 успешно выполненных проектов по геодезическому сопровождению строительства и мониторингу земельных участков. "; 
+		  $descriptions[] = "Более 600 успешно выполненных проектов"; 
+		  $descriptions[] = "Строительства и мониторингу земельных участков"; 
+		  $descriptions[] = "Счету предприятия более 600 успешно выполненных проектов"; 
+		  
+		$url = array(); 
+		  $url[] = "https://www.google.com.ua"; 
+		  $url[] = "https://www.ya.com.ua"; 
+		  $url[] = "https://allo.ua"; 
+		  $url[] = "https://nightdevel.ru"; 
+			
+			$x=0;
+			while($x < 6) {
+					$number = mt_rand(0, count($quotes) - 1);
+					 $number2 = mt_rand(0, 100);
+					 
+		// не верно с id поступаю, так как в контроле не поставил ему автоинкремент
+
+		
+				$query = \Drupal::database()->insert('example_field_data');
+				$query->fields([
+				  'id' => $number2,
+				  'title' => $quotes[$number],
+				  'description' => $descriptions[$number],
+				  'url' => $url[$number],
+				  'vid'  => '1',
+				  'langcode' => 'ru',
+				  'user_id' => '1',
+				  'status' => '1',
+				  'default_langcode' => '1',
+				]);
+				$query->execute();
+
+				$x++;
+			}
+}
+
+
+function example_uninstall() {
+  # Remove table
+  \Drupal::state()->delete('example_field_data.example_field_data');
+}

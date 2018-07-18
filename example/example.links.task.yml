@@ -1,0 +1,27 @@
+# Example routing definition
+example.settings_tab:
+  route_name: example.settings
+  title: 'Settings'
+  base_route: example.settings
+
+entity.example.canonical:
+  route_name: entity.example.canonical
+  base_route: entity.example.canonical
+  title: 'View'
+
+entity.example.edit_form:
+  route_name: entity.example.edit_form
+  base_route: entity.example.canonical
+  title: 'Edit'
+
+entity.example.version_history:
+  route_name: entity.example.version_history
+  base_route: entity.example.canonical
+  title: 'Revisions'
+
+entity.example.delete_form:
+  route_name:  entity.example.delete_form
+  base_route:  entity.example.canonical
+  title: Delete
+  weight: 10
+

@@ -1,0 +1,21 @@
+
+# Example menu items definition
+entity.example.collection:
+  title: 'Example list'
+  route_name: entity.example.collection
+  description: 'List Example entities'
+  parent: system.admin_structure
+  weight: 100
+
+example.admin.structure.settings:
+  title: 'Example settings'
+  description: 'Configure Example entities'
+  route_name: example.settings
+  parent: system.admin_structure
+
+example.link:
+  title: 'Вывод сущностей'
+  description: 'This is an example'
+  menu_name: main
+  route_name: example.routing
+  weight: 100
