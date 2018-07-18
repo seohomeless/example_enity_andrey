@@ -1,5 +1,4 @@
-# example_enity_andrey
-<h1>Test work for enity Drupal 8</h1>
+##Test work for enity Drupal 8
 
 При установке модуль создает записи только в базе example_field_data рандомно. Не полуилось связать базы с полямя сущности, нужно создавать несколько таблиц.
 Не выводит в админке, но сайте показываеть.
@@ -7,8 +6,8 @@
 админке и отображение.
 
 
-Функция для выборки поле с базы
-
+###Функция для выборки поле с базы
+```
 /**
  * Implements hook_page for my array in the enity.
  */
@@ -19,10 +18,13 @@ function bartik_preprocess_page(&$var) {
 
 		$var['results'] = $result;
 }
+```
 
-Вывод в твиг шаблоне
-    <table>
-			{% for result in results %}
-				<tr><td><h2>{{ result.title }}</h2>{{ result.description }}<br>Ссылка: {{ result.url }}</td></tr>
-            {% endfor %}
-		</table>	
+###Вывод в твиг шаблоне
+```
+<table>
+{% for result in results %}
+<tr><td><h2>{{ result.title }}</h2>{{ result.description }}<br>Ссылка: {{ result.url }}</td></tr>
+{% endfor %}
+</table>	
+```
